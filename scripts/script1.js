@@ -71,3 +71,23 @@ const inventors = [{
     passed: 1909
   }
 ];
+
+console.table(inventors.filter(function(inventor) {
+  return inventor.year >= 1500 && inventor.year < 1600
+}))
+
+console.table(inventors.map(function(inventor) {
+  return inventor.first + ' ' + inventor.last
+}))
+
+console.table(inventors.sort(function(personA, personB) {
+  return personA.year - personB.year
+}))
+
+console.log(inventors.reduce(function(sum, inventor) {
+  return sum + (inventor.passed - inventor.year)
+}, 0))
+
+console.table(inventors.sort(function(inventorA, inventorB) {
+  return (inventorB.passed - inventorB.year) - (inventorA.passed - inventorA.year)
+}))
