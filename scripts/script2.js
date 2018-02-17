@@ -13,7 +13,11 @@ if (links) {
 
   })
 
-  let boulevardsDeETC = boulevardsNames.filter((boulevardsName) => boulevardsName.includes("de"))
+  let boulevardsDeETC = boulevardsNames.filter(function(boulevardsName) {
+
+    return boulevardsName.includes("de")
+
+  })
 
   console.table(boulevardsDeETC);
 
